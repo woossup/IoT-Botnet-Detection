@@ -83,13 +83,14 @@ You need to read and agree to the following terms of use to download and use the
 
 `1. Definitions`
 
-The following terms, unless the context requires otherwise, have the following meanings:
+>The following terms, unless the context requires otherwise, have the following meanings:
+>
+>"Data Team": means the employees and students at William & Mary who are working on the Botnet-Detection Dataset;
+>
+>"Botnet-Detection Dataset": means the power consumption traces collected by the Data Team;
+>
+>"Licensee", "You", "Yours": means the person or entity acquiring a license hereunder for access to and use of the Botnet-Detection Dataset.
 
-"Data Team": means the employees and students at William & Mary who are working on the Botnet-Detection Dataset;
-
-"Botnet-Detection Dataset": means the power consumption traces collected by the Data Team;
-
-"Licensee", "You", "Yours": means the person or entity acquiring a license hereunder for access to and use of the Botnet-Detection Dataset.
 
 `2. Grant of License`
 
