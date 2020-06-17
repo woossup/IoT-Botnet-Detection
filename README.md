@@ -16,7 +16,7 @@ This repository contains the following files. You agree to the [Terms of Use for
 
 | Files   | Description | Size |
 | ------- | ----------- | ---- |
-| ![Botnet_Detection.mat](https://drive.google.com/file/d/1LSLPUBZJIRWWAOmC7DUyxTgWG1pMZxnF/view?usp=sharing)   | Segmented Power Traces of IoT Devices. |  1.06GB    |
+| [Botnet_Detection.mat](https://drive.google.com/file/d/1LSLPUBZJIRWWAOmC7DUyxTgWG1pMZxnF/view?usp=sharing)   | Segmented Power Traces of IoT Devices. |  1.06GB    |
 |         |             |      |
 | READ.me | Readme      |      |
 
