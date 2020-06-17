@@ -22,7 +22,7 @@ This repository contains the following files. You agree to the [Terms of Use for
 | [LeaveOneOut-evaluation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Scripts/LeaveOneOut-evaluation.m) | MATLAB source code for preparing LeaveOneOut-evaluation tests.  |  2KB    |
 | [BotnetDetection_CNN.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/CNN/CNN_CrossValidation.m) | MATLAB source code for cross-validation training and testing using the dataset. |  4KB    |
 | [training_screenshot.png](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/training_screenshot.png?raw=true) |A screen shot of the training process. |  191KB     |
-| [READ.me](https://github.com/woossup/IoT-Botnet-Detection/blob/master/README.md) | Readme      |      |
+| [READ.me](https://github.com/woossup/IoT-Botnet-Detection/blob/master/README.md) | Readme      |  10KB    |
 
 ------
 
