@@ -2,16 +2,16 @@
 %% Training
 
 % Class 1
-cross_service = [google_assistant(:,1:550), access_point(:,1:500), access_point_ftp(:,1:50), camera_detection(:,1:550), camera_only(:,1:550)]; % 2200
+cross_service = [voice_assistant(:,1:550), router(:,1:500), router_ftp(:,1:50), camera_motion(:,1:550), camera_streaming(:,1:550)]; % 2200
 
 % Class 2
-cross_reboot = [device_reboot(:,1:2200)]; % 2200
+cross_reboot = [reboot(:,1:2200)]; % 2200
 
 % Class 3
-cross_idle = [device_idle(:,1:2200)]; % 2200
+cross_idle = [idle(:,1:2200)]; % 2200
 
 % Class 4
-cross_mirai = [mirai_with_google(:,1:440), mirai_with_camera(:,1:440), mirai_with_router(:,1:440), mirai_when_idle(:,1:440), mirai_loader(:,1:440) ];  % 2200
+cross_mirai = [mirai_with_voice(:,1:440), mirai_with_camera(:,1:440), mirai_with_router(:,1:440), mirai_idle(:,1:440), mirai_loader(:,1:440) ];  % 2200
 
 %% Merge
 cross_sample = [cross_service, cross_reboot, cross_idle, cross_mirai]; % 8800
