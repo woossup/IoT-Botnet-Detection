@@ -22,7 +22,7 @@ This repository contains the following files. You agree to the [Terms of Use for
 | LeaveOneOut-evaluation.m | MATLAB source code for preparing LeaveOneOut-evaluation tests.  |      |
 | CNN-CrossValidation.m | MATLAB source code for cross-validation training and testing using the dataset. |      |
 | CNN-LeaveOneOut.m | MATLAB source code for leave-one-out training and testing using the dataset. |      |
-| READ.me | Readme      |      |
+| [READ.me](https://github.com/woossup/IoT-Botnet-Detection/blob/master/README.md) | Readme      |      |
 
 ------
 
