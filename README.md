@@ -1,4 +1,4 @@
-# IoT-Botnet-Detection
+# IoT-Botnet-Detection via Power Consumption Modeling
 
 This website contains datasets of Power Consumption traces for IoT Botnet Detection.
 
