@@ -94,14 +94,14 @@ You need to read and agree to the following terms of use to download and use the
 
 `2. Grant of License`
 
-William & Mary hereby grants to You a non-exclusive, non-transferable, revocable license to use the Botnet-Detection Dataset solely for Your non-commercial, educational, and research purposes only, but without any right to copy or reproduce, publish or otherwise make available to the public or communicated to the public, sell, rent or lend the whole or any constituent part of the Botnet-Detection Dataset thereof. The Botnet-Detection Dataset shall not be redistributed without the express written prior approval of William & Mary. You agree not to reverse engineer, separate or otherwise tamper with the Botnet-Detection Dataset so that data can be extracted and used outside the scope of that permitted in this Agreement.
-
-You agree to acknowledge the source of the Botnet-Detection Dataset in all of Your publications and presentations based wholly or in part on the Botnet-Detection Dataset. You agree to provide a disclaimer in any publication or presentation to the effect that William & Mary does not bear any responsibility for Your analysis or interpretation of the Dataset.
-
-You agree and acknowledge that William & Mary may hold, process, and store any personal data submitted by You for validation and statistical purposes and the purposes of the administration and management of the Botnet-Detection dataset. You agree that any personal data submitted by You is accurate to the best of his or her knowledge.
-
-William & Mary provides the Botnet-Detection Dataset "AS IS," without any warranty or promise of technical support, and disclaims any liability of any kind for any damages whatsoever resulting from use of the Botnet-Detection Dataset.
-
-WILLIAM & MARY MAKES NO WARRANTIES, EXPRESS OR IMPLIED WITH RESPECT TO THE BOTNET-DETECTION DATASET, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, WHICH ARE HEREBY EXPRESSLY DISCLAIMED.
-
-Your acceptance and use of the Botnet-Detection Dataset binds you to the terms and conditions of this License as stated herein.
+>William & Mary hereby grants to You a non-exclusive, non-transferable, revocable license to use the Botnet-Detection Dataset solely for Your non-commercial, educational, and research purposes only, but without any right to copy or reproduce, publish or otherwise make available to the public or communicated to the public, sell, rent or lend the whole or any constituent part of the Botnet-Detection Dataset thereof. The Botnet-Detection Dataset shall not be redistributed without the express written prior approval of William & Mary. You agree not to reverse engineer, separate or otherwise tamper with the Botnet-Detection Dataset so that data can be extracted and used outside the scope of that permitted in this Agreement.
+>
+>You agree to acknowledge the source of the Botnet-Detection Dataset in all of Your publications and presentations based wholly or in part on the Botnet-Detection Dataset. You agree to provide a disclaimer in any publication or presentation to the effect that William & Mary does not bear any responsibility for Your analysis or interpretation of the Dataset.
+>
+>You agree and acknowledge that William & Mary may hold, process, and store any personal data submitted by You for validation and statistical purposes and the purposes of the administration and management of the Botnet-Detection dataset. You agree that any personal data submitted by You is accurate to the best of his or her knowledge.
+>
+>William & Mary provides the Botnet-Detection Dataset "AS IS," without any warranty or promise of technical support, and disclaims any liability of any kind for any damages whatsoever resulting from use of the Botnet-Detection Dataset.
+>
+>WILLIAM & MARY MAKES NO WARRANTIES, EXPRESS OR IMPLIED WITH RESPECT TO THE BOTNET-DETECTION DATASET, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, WHICH ARE HEREBY EXPRESSLY DISCLAIMED.
+>
+>Your acceptance and use of the Botnet-Detection Dataset binds you to the terms and conditions of this License as stated herein.
