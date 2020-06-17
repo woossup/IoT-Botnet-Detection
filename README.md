@@ -20,6 +20,25 @@ This repository contains the following files. You agree to the Terms of Use for 
 |         |             |      |
 | READ.me | Readme      |      |
 
+## Instructions
+
+1. Variables
+— Each instance consists of 7,500 data points since a single instance is 1.5 seconds data and the sampling rate is 5kHz.
+— For example, in mirai_with_camera, there are 910 instances collected when camera being attacked.
+
+2. Display a single Instance
+— Each column represents a single instance.
+— You can select a column and plot it.
+
+3. Scripts before Test/Training
+
+— Our model has four classes, and each class consists of 2,200 instances. 
+- Depending on what you test, modify and run the attached scripts.
+— The following example shows self-evaluation on Router Device
+
+4. Run our CNN model
+
+— After Step 3, run the following commmands.
 
 ## Example
 
