@@ -83,7 +83,7 @@ self_mirai = [mirai_with_router(:,1:700), mirai_idle(:,1:800), mirai_loader(:,1:
 
 The following shows how Botnet-Detection CNN works.
 
-1. Prepare data for Training
+###1. Prepare data for Training
 
 ```matlab
 power_tensor = power;
@@ -91,7 +91,7 @@ class = categorical(label);
 ```
 `power_tensor` and `class` are the Power Trace input and labels.
 
-2. Parameter Settings
+###2. Parameter Settings
 
 ```matlab
 % [M,N,S] : Power Matrix for each instance
@@ -108,7 +108,7 @@ learn_rate = 0.001;
 l2_factor = 0.01;
 ```
 
-3. Divide the dataset into training and testing subsets
+###3. Divide the dataset into training and testing subsets
 
 ```matlab
 K = 5; % K-fold corss validation
@@ -124,7 +124,7 @@ testClass = class(testIdx,1);
 valData = {testPower,testClass};
 ```
 
-4. Set neural network and training options
+###4. Set neural network and training options
 
 ```matlab
 % Convolutional Neural Network settings
@@ -152,7 +152,7 @@ options = trainingOptions('sgdm','ExecutionEnvironment','parallel',...
 ```
 - MATLAB 2017b or newer versions are needed to use `batchNormalizationLayer()` for network layers and `ValidationData` for training options. For `trainingOptions()`, `'ExecutionEnvironmnet'` can be `'cpu'`, `'gpu'`, or `'parallel'`.
 
-5. Train and test the neural network; calculate recognition accuracy
+###5. Train and test the neural network; calculate recognition accuracy
 
 ```matlab
 [trainedNet,tr{k,1}] = trainNetwork(trainPower,trainClass,layers,options);
@@ -165,7 +165,7 @@ tr{k,4} = YTest;
 test_sensitivity = sum(YTest == TTest)/numel(TTest);
 ```
  
-6. Plot the confusion matrix
+###6. Plot the confusion matrix
 ```matlab
 % plot confusion matrix
 ttest = dummyvar(double(TTest))';
@@ -174,7 +174,7 @@ tpredict = dummyvar(double(YTest))';
 plotconfusion(ttest,tpredict);
 ```
 
-7. Calculate performance metrics
+###7. Calculate performance metrics
 ```matlab
 test_stats(k,1:4) = mean(per); % 'FN','FP','TP','TN'
 test_stats(k,5) = test_sensitivity; % sensitivity
