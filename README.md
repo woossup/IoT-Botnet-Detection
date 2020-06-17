@@ -20,6 +20,8 @@ This repository contains the following files. You agree to the [Terms of Use for
 |         |             |      |
 | READ.me | Readme      |      |
 
+------
+
 ## Instructions
 
 ### 1. Load the Dataset
@@ -70,7 +72,7 @@ self_mirai = [mirai_with_router(:,1:700), mirai_when_idle(:,1:800), mirai_loader
 The following shows how Botnet-Detection CNN works.
 
 
-
+------
 ## Terms of Use for Botnet-Detection Dataset
 
 You need to read and agree to the following terms of use to download and use the Botnet-Detection Dataset.
