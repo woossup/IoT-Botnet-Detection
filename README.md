@@ -20,8 +20,7 @@ This repository contains the following files. You agree to the [Terms of Use for
 | [Self-evaluation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Scripts/Self-evaluation.m) | MATLAB source code for preparing Self-evaluation tests.  | 825B     |
 | [Cross-evaluation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Scripts/Cross-evaluation.m) | MATLAB source code for preparing Cross-evaluation tests.  | 1KB     |
 | [LeaveOneOut-evaluation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Scripts/LeaveOneOut-evaluation.m) | MATLAB source code for preparing LeaveOneOut-evaluation tests.  |  2KB    |
-| [CNN_CrossValidation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/CNN/CNN_CrossValidation.m) | MATLAB source code for cross-validation training and testing using the dataset. |  4KB    |
-| CNN_LeaveOneOut.m | MATLAB source code for leave-one-out training and testing using the dataset. |      |
+| [BotnetDetection_CNN.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/CNN/CNN_CrossValidation.m) | MATLAB source code for cross-validation training and testing using the dataset. |  4KB    |
 | [training_screenshot.png](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/training_screenshot.png?raw=true) |A screen shot of the training process. |  191KB     |
 | [READ.me](https://github.com/woossup/IoT-Botnet-Detection/blob/master/README.md) | Readme      |      |
 
