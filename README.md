@@ -17,8 +17,8 @@ This repository contains the following files. You agree to the [Terms of Use for
 | Files   | Description | Size |
 | ------- | ----------- | ---- |
 | [Botnet_Detection.mat](https://drive.google.com/file/d/1LSLPUBZJIRWWAOmC7DUyxTgWG1pMZxnF/view?usp=sharing)   | Segmented Power Traces of IoT Devices. |  1.06GB    |
-| Self-evaluation.m | MATLAB source code for preparing Self-evaluation tests.  |      |
-| Cross-evaluation.m | MATLAB source code for preparing Cross-evaluation tests.  |      |
+| [Self-evaluation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Scripts/Self-evaluation.m) | MATLAB source code for preparing Self-evaluation tests.  |      |
+| [Cross-evaluation.m](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Scripts/Cross-evaluation.m) | MATLAB source code for preparing Cross-evaluation tests.  |      |
 | LeaveOneOut-evaluation.m | MATLAB source code for preparing LeaveOneOut-evaluation tests.  |      |
 | CNN-CrossValidation.m | MATLAB source code for cross-validation training and testing using the dataset. |      |
 | CNN-LeaveOneOut.m | MATLAB source code for leave-one-out training and testing using the dataset. |      |
