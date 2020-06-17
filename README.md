@@ -20,7 +20,8 @@ This repository contains the following files. You agree to the [Terms of Use for
 | Self-evaluation.m | MATLAB source code for preparing Self-evaluation tests.  |      |
 | Cross-evaluation.m | MATLAB source code for preparing Cross-evaluation tests.  |      |
 | LeaveOneOut-evaluation.m | MATLAB source code for preparing LeaveOneOut-evaluation tests.  |      |
-| Botnet_Detection_CNN.m | MATLAB source code for training and testing using the dataset. |      |
+| CNN-CrossValidation.m | MATLAB source code for cross-validation training and testing using the dataset. |      |
+| CNN-LeaveOneOut.m | MATLAB source code for leave-one-out training and testing using the dataset. |      |
 | READ.me | Readme      |      |
 
 ------
