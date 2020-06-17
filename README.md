@@ -27,10 +27,14 @@ This repository contains the following files. You agree to the Terms of Use for 
 - Each instance consists of 7,500 data points since a single instance is 1.5 seconds data and the sampling rate is 5kHz.
 - For example, in mirai_with_camera, there are 910 instances collected when camera being attacked.
 
+![variables](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/variables.png)
+
 2. Display a single Instance
 
 - Each column represents a single instance.
 - You can select a column and plot it.
+
+![instance](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/instance.png)
 
 3. Script for Intput Dataset
 
