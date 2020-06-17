@@ -73,7 +73,7 @@ self_mirai = [mirai_with_router(:,1:700), mirai_idle(:,1:800), mirai_loader(:,1:
 
 ### 5. Run our CNN model
 
-- After Step 3, run `[net_info,perf]=onedcnn(chosen_dataset,chosen_label);` for traininig/testing the dataset.
+- After Step 3, run `[net_info,perf]=CNN-CrossValidation(chosen_final,chosen_label);` for traininig/testing the dataset.
 
 
 ## CNN Model
