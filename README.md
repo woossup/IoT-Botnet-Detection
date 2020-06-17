@@ -23,10 +23,12 @@ This repository contains the following files. You agree to the Terms of Use for 
 ## Instructions
 
 1. Variables
+
 — Each instance consists of 7,500 data points since a single instance is 1.5 seconds data and the sampling rate is 5kHz.
 — For example, in mirai_with_camera, there are 910 instances collected when camera being attacked.
 
 2. Display a single Instance
+
 — Each column represents a single instance.
 — You can select a column and plot it.
 
@@ -39,6 +41,12 @@ This repository contains the following files. You agree to the Terms of Use for 
 4. Run our CNN model
 
 — After Step 3, run the following commmands.
+
+
+```matlab
+%%Classification
+[net_info,perf]=onedcnn(self_final,self_label);
+```
 
 ## Example
 
