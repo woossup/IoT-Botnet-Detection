@@ -22,21 +22,21 @@ This repository contains the following files. You agree to the Terms of Use for 
 
 ## Instructions
 
-1. Variables
+### 1. Variables
 
 - Each instance consists of 7,500 data points since a single instance is 1.5 seconds data and the sampling rate is 5kHz.
 - For example, in mirai_with_camera, there are 910 instances collected when camera being attacked.
 
 ![variables](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/variables.png)
 
-2. Display a single Instance
+### 2. Display a single Instance
 
 - Each column represents a single instance.
 - You can select a column and plot it.
 
 ![instance](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/instance.png)
 
-3. Script for Intput Dataset
+### 3. Script for Intput Dataset
 
 - Our model has four classes, and each class consists of 2,200 instances. 
 - Depending on what you test, you may modify or run the attached scripts.
@@ -56,7 +56,7 @@ self_mirai = [mirai_with_router(:,1:700), mirai_when_idle(:,1:800), mirai_loader
 ...
 ```
 
-4. Run our CNN model
+### 4. Run our CNN model
 
 - After Step 3, run the following commmand to test/train chosen datasets.
 
