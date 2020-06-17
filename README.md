@@ -32,16 +32,29 @@ This repository contains the following files. You agree to the Terms of Use for 
 - Each column represents a single instance.
 - You can select a column and plot it.
 
-3. Scripts before Test/Training
+3. Script for Intput Dataset
 
 - Our model has four classes, and each class consists of 2,200 instances. 
-- Depending on what you test, modify and run the attached scripts.
-- The following example shows self-evaluation on Router Device
+- Depending on what you test, you may modify or run the attached scripts.
+- The following example shows parts of self-evaluation on Router Device
+
+```matlab
+%%% Self Evaluation - Access Point
+%% Training
+% Class 1
+self_service = [access_point(:,1:1980), access_point_ftp(:,1:220)]; % 2200 
+% Class 2
+self_reboot = [device_reboot(:,1:2200)]; % 2200
+% Class 3
+self_idle = [device_idle(:,1:2200)]; % 2200
+% Class 4
+self_mirai = [mirai_with_router(:,1:700), mirai_when_idle(:,1:800), mirai_loader(:,1:700) ]; % 2200
+...
+```
 
 4. Run our CNN model
 
-- After Step 3, run the following commmands.
-
+- After Step 3, run the following commmand to test/train chosen datasets.
 
 ```matlab
 %% Classification
