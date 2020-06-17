@@ -83,6 +83,112 @@ self_mirai = [mirai_with_router(:,1:700), mirai_idle(:,1:800), mirai_loader(:,1:
 
 The following shows how Botnet-Detection CNN works.
 
+1. Prepare data for Training
+
+```matlab
+power_tensor = power;
+class = categorical(label);
+```
+`power_tensor` and `class` are the Power Trace input and labels.
+
+2. Parameter Settings
+
+```matlab
+% [M,N,S] : Power Matrix for each instance
+[M,N,S,T] = size(power_tensor);
+Nw = 4; % number of classes
+Nt = T; % total number of instances
+
+% CNN Hyperparameters
+convKernelSize = 512;
+convChanNum = 10;
+poolSize = 4;
+n_epoch = 30;
+learn_rate = 0.001;
+l2_factor = 0.01;
+```
+
+3. Divide the dataset into training and testing subsets
+
+```matlab
+K = 5; % K-fold corss validation
+cv = cvpartition(Nt,'kfold',K);
+test_stats = zeros(K,15);
+k = 1 % for k=1:K
+trainIdx = find(training(cv,k));
+testIdx = find(test(cv,k));
+trainPower = power_tensor(:,:,:,trainIdx);
+trainClass = class(trainIdx,1);
+testPower = power_tensor(:,:,:,testIdx);
+testClass = class(testIdx,1);
+valData = {testPower,testClass};
+```
+
+4. Set neural network and training options
+
+```matlab
+% Convolutional Neural Network settings
+layers = [
+    imageInputLayer([M N S]);
+    convolution2dLayer( [1 convKernelSize],convChanNum,'Stride', [1 128]);
+    batchNormalizationLayer;
+    reluLayer;
+    maxPooling2dLayer([1 poolSize],'Stride', [1 4]);
+    fullyConnectedLayer(Nw);
+    softmaxLayer;
+    classificationLayer
+];
+% Convolutional Neural Network training options
+options = trainingOptions('sgdm','ExecutionEnvironment','parallel',...
+        'MaxEpochs',n_epoch,...
+        'InitialLearnRate',learn_rate,...
+        'L2Regularization',l2_factor,...
+        'ValidationData',valData,...
+        'ValidationFrequency',10,...
+        'ValidationPatience',Inf,...
+        'Shuffle','every-epoch',...
+        'Verbose',false,...
+        'Plots','training-progress');
+```
+- MATLAB 2017b or newer versions are needed to use `batchNormalizationLayer()` for network layers and `ValidationData` for training options. For `trainingOptions()`, `'ExecutionEnvironmnet'` can be `'cpu'`, `'gpu'`, or `'parallel'`.
+
+5. Train and test the neural network; calculate recognition accuracy
+
+```matlab
+[trainedNet,tr{k,1}] = trainNetwork(trainPower,trainClass,layers,options);
+t1 = toc; % training end time
+[YTest, scores] = classify(trainedNet,testPower);
+TTest = testClass;
+tr{k,2} = scores; % classify scores
+tr{k,3} = TTest;
+tr{k,4} = YTest;
+test_sensitivity = sum(YTest == TTest)/numel(TTest);
+```
+ 
+6. Plot the confusion matrix
+```matlab
+% plot confusion matrix
+ttest = dummyvar(double(TTest))';
+tpredict = dummyvar(double(YTest))';
+[c,cm,ind,per] = confusion(ttest,tpredict);
+plotconfusion(ttest,tpredict);
+```
+
+7. Calculate performance metrics
+```matlab
+test_stats(k,1:4) = mean(per); % 'FN','FP','TP','TN'
+test_stats(k,5) = test_sensitivity; % sensitivity
+test_stats(k,6) = t1; % training time
+test_stats(k,7) = t2; % testing time               
+test_stats(k,8) = test_stats(k,2)/(test_stats(k,4) + test_stats(k,2)); % FPR
+test_stats(k,9) = test_stats(k,3)/(test_stats(k,3) + test_stats(k,1)); % TPR
+test_stats(k,10) = test_stats(k,4)/(test_stats(k,4) + test_stats(k,2)); % TNR
+test_stats(k,11) = test_stats(k,1)/(test_stats(k,3) + test_stats(k,1)); % FNR
+test_stats(k,12) = test_stats(k,3)/(test_stats(k,2) + test_stats(k,3)); % Presicion
+test_stats(k,13) = (test_stats(k,3)+test_stats(k,4))/(test_stats(k,1) + test_stats(k,2) + test_stats(k,3) + test_stats(k,4)); % Accuracy
+test_stats(k,14) = (test_stats(k,1)+test_stats(k,2))/(test_stats(k,1) + test_stats(k,2) + test_stats(k,3) + test_stats(k,4)); % Error rate
+test_stats(k,15) = 2*(test_stats(k,12)*test_stats(k,9))/(test_stats(k,12)+test_stats(k,9)); % F Measure1        
+```
 
 ------
 ## Terms of Use for Botnet-Detection Dataset
