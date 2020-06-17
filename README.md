@@ -25,7 +25,7 @@ This repository contains the following files. You agree to the [Terms of Use for
 
 ### 1. Load the Dataset
 
-Load the dataset into the Matlab workspace by running load('Botnet_Detection.mat');. 
+Load the dataset into the Matlab workspace by running `load('Botnet_Detection.mat');`. 
 
 ### 2. Variables
 
@@ -63,14 +63,8 @@ self_mirai = [mirai_with_router(:,1:700), mirai_when_idle(:,1:800), mirai_loader
 
 ### 5. Run our CNN model
 
-- After Step 3, run the following command to test/train chosen datasets.
+- After Step 3, run `[net_info,perf]=onedcnn(chosen_dataset,chosen_label);` for testing/traininig the dataset.
 
-```matlab
-%% Classification
-[net_info,perf]=onedcnn(self_final,self_label);
-```
-
-- The following shows the training process.
 
 ## CNN Model
 
@@ -82,7 +76,7 @@ The following shows how Botnet-Detection CNN works.
 
 You need to read and agree to the following terms of use to download and use the Botnet-Detection Dataset.
 
-1. Definitions
+`1. Definitions`
 
 The following terms, unless the context requires otherwise, have the following meanings:
 
@@ -92,7 +86,7 @@ The following terms, unless the context requires otherwise, have the following m
 
 "Licensee", "You", "Yours": means the person or entity acquiring a license hereunder for access to and use of the Botnet-Detection Dataset.
 
-2. Grant of License
+`2. Grant of License`
 
 William & Mary hereby grants to You a non-exclusive, non-transferable, revocable license to use the Botnet-Detection Dataset solely for Your non-commercial, educational, and research purposes only, but without any right to copy or reproduce, publish or otherwise make available to the public or communicated to the public, sell, rent or lend the whole or any constituent part of the Botnet-Detection Dataset thereof. The Botnet-Detection Dataset shall not be redistributed without the express written prior approval of William & Mary. You agree not to reverse engineer, separate or otherwise tamper with the Botnet-Detection Dataset so that data can be extracted and used outside the scope of that permitted in this Agreement.
 
