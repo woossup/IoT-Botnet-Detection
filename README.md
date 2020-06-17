@@ -12,7 +12,7 @@ Elsevier Smart Health, 2019. DOI: https://doi.org/10.1016/j.smhl.2019.100103
 
 ## Files
 
-This repository contains the following files. You agree to the ![Terms of Use for Botnet-Detection Dataset](https://github.com/woossup/IoT-Botnet-Detection/blob/master/README.md#terms-of-use-for-botnet-detection-dataset) to download and use the files.
+This repository contains the following files. You agree to the [Terms of Use for Botnet-Detection Dataset](#terms-of-use-for-botnet-detection-dataset) to download and use the files.
 
 | Files   | Description | Size |
 | ------- | ----------- | ---- |
