@@ -17,7 +17,10 @@ This repository contains the following files. You agree to the [Terms of Use for
 | Files   | Description | Size |
 | ------- | ----------- | ---- |
 | [Botnet_Detection.mat](https://drive.google.com/file/d/1LSLPUBZJIRWWAOmC7DUyxTgWG1pMZxnF/view?usp=sharing)   | Segmented Power Traces of IoT Devices. |  1.06GB    |
-|         |             |      |
+| Self-evaluation.m | MATLAB source code for preparing Self-evaluation tests.  |      |
+| Cross-evaluation.m | MATLAB source code for preparing Cross-evaluation tests.  |      |
+| LeaveOneOut-evaluation.m | MATLAB source code for preparing LeaveOneOut-evaluation tests.  |      |
+| Botnet_Detection_CNN.m | MATLAB source code for training and testing using the dataset. |      |
 | READ.me | Readme      |      |
 
 ------
