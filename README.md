@@ -32,14 +32,14 @@ Load the dataset into the Matlab workspace by running `load('Botnet_Detection.ma
 - Each instance consists of 7,500 data points since a single instance is 1.5 seconds data and the sampling rate is 5kHz.
 - For example, in mirai_with_camera, there are 910 instances collected when camera being attacked.
 
-![variables](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/variables.png)
+![variables](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/variables.png?raw=true)
 
 ### 3. Display a single Instance
 
 - Each column represents a single instance.
 - You can select a column and plot it.
 
-![instance](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/instance.png)
+![instance](https://github.com/woossup/IoT-Botnet-Detection/blob/master/Instructions/instance.png?raw=true)
 
 ### 4. Script for Input Dataset
 
