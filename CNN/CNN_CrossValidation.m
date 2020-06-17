@@ -3,15 +3,14 @@
 % College of William and Mary
 % SmartGate
 
-function [info, perf] = data_to_cnn(csi,label)
+function [info, perf] = CNN_CrossValidation(power,label)
     
-	csi_tensor = csi;
-    word = categorical(label);
+	power_tensor = power;
+    class = categorical(label);
 
-    [M,N,S,T] = size(csi_tensor);
+    [M,N,S,T] = size(power_tensor);
     Nw = 4; % number of classes
     Nt = T;
-
     
     rng('shuffle');
     convKernelSize = 512;
@@ -42,11 +41,11 @@ function [info, perf] = data_to_cnn(csi,label)
         % get training/testing input
         trainIdx = find(training(cv,k));
         testIdx = find(test(cv,k));
-        trainCsi = csi_tensor(:,:,:,trainIdx);
-        trainWord = word(trainIdx,1);
-        testCsi = csi_tensor(:,:,:,testIdx);
-        testWord = word(testIdx,1);
-        valData = {testCsi,testWord};
+        trainPower = power_tensor(:,:,:,trainIdx);
+        trainClass = class(trainIdx,1);
+        testPower = power_tensor(:,:,:,testIdx);
+        testClass = class(testIdx,1);
+        valData = {testPower,testClass};
 
         options = trainingOptions('sgdm','ExecutionEnvironment','parallel',...
                               'MaxEpochs',n_epoch,...
@@ -60,15 +59,15 @@ function [info, perf] = data_to_cnn(csi,label)
                               'Plots','training-progress');
         tic;
 
-        [trainedNet,tr{k,1}] = trainNetwork(trainCsi,trainWord,layers,options);
+        [trainedNet,tr{k,1}] = trainNetwork(trainPower,trainClass,layers,options);
         t1 = toc; % training end time
 
-        [YTest, scores] = classify(trainedNet,testCsi);
-        TTest = testWord;
+        [YTest, scores] = classify(trainedNet,testPower);
+        TTest = testClass;
         tr{k,2} = scores; % classify scores
         tr{k,3} = TTest;
         tr{k,4} = YTest;
-        test_accuracy = sum(YTest == TTest)/numel(TTest);
+        test_sensitivity = sum(YTest == TTest)/numel(TTest);
 
         % plot confusion matrix
         ttest = dummyvar(double(TTest))';
@@ -82,7 +81,7 @@ function [info, perf] = data_to_cnn(csi,label)
         plotconfusion(ttest,tpredict);
         t2 = toc; % testing end time
         test_stats(k,1:4) = mean(per); % 'FN','FP','TP','TN'
-        test_stats(k,5) = test_accuracy; % accuracy
+        test_stats(k,5) = test_sensitivity; % sensitivity
         test_stats(k,6) = t1; % training time
         test_stats(k,7) = t2; % testing time
                 
