@@ -1,6 +1,7 @@
 # IoT-Botnet-Detection via Power Consumption Modeling
 
 This website contains datasets of Power Consumption traces for IoT Botnet Detection.
+##### 2020 Mostly Downloaded Paper Award
 
 
 ## Cite the Paper
