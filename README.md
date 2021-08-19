@@ -8,7 +8,7 @@ This website contains datasets of Power Consumption traces for IoT Botnet Detect
 
 Woosub Jung, Hongyang Zhao, Minglong Sun, Gang Zhou
 IoT Botnet Detection via Power Consumption Modeling
-Elsevier Smart Health, 2019. DOI: https://doi.org/10.1016/j.smhl.2019.100103
+Elsevier Smart Health, 2020. DOI: https://doi.org/10.1016/j.smhl.2019.100103
 
 
 ## Files
